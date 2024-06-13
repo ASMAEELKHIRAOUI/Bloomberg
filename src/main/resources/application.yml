@@ -5,22 +5,17 @@ server:
     include-message: always
     include-binding-errors: always
 
-# Spring Configuration
 spring:
-  main:
-    allow-circular-references: true
-  # to enable colors when you run your app outside IntelliJ
   output:
     ansi:
       enabled: always
-  # Database Configuration
   datasource:
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:

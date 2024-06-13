@@ -63,10 +63,6 @@ Logs are formatted with ANSI colors for readability.
 - Unit tests are implemented using JUnit 5 for comprehensive coverage.
 - Mockito is utilized for mocking dependencies to isolate components under test.
 
-### Integration Tests
-
-- Integration tests validate end-to-end behavior of the API using in-memory database configurations.
-
 ## Dockerization
 
 The application is Dockerized using a multi-stage Dockerfile to streamline deployment and optimize runtime efficiency.
