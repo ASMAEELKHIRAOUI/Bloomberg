@@ -1,0 +1,19 @@
+FROM maven:3.8.1-eclipse-temurin-21-jammy AS build
+
+WORKDIR /app
+
+COPY pom.xml .
+
+COPY src src
+
+RUN mvn clean install
+
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
+COPY --from=build /app/target/bloomberg-1.0.0-SNAPSHOT.jar bloomberg.jar
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "bloomberg.jar"]
