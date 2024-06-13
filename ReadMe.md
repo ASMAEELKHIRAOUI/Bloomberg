@@ -5,7 +5,7 @@ Bloomberg FX Deals API facilitates the management of Foreign Exchange (FX) deals
 ## API Endpoint
 
 ### Endpoint
-[POST] http://localhost:8081/api/deals
+[POST] http://localhost:8082/api/deals
 
 ### Request JSON Example
 ```json
@@ -75,7 +75,7 @@ The application is Dockerized using a multi-stage Dockerfile to streamline deplo
 
 Docker Compose orchestrates the deployment of services:
 
-- **Spring Boot Application:** Exposed on [PORT 8080].
+- **Spring Boot Application:** Exposed on [PORT 8082].
 - **MySQL Database:** Configured for data persistence.
 
 ## Running the Application

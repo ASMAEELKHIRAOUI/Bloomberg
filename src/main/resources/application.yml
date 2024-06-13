@@ -1,6 +1,6 @@
 # Server Configuration
 server:
-  port: 8080
+  port: 8082
   error:
     include-message: always
     include-binding-errors: always
@@ -15,9 +15,9 @@ spring:
       enabled: always
   # Database Configuration
   datasource:
-    url: jdbc:mysql://localhost:3306/bloomberg?createDatabaseIfNotExist=true&serverTimezone=UTC
-    username: root
-    password:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
